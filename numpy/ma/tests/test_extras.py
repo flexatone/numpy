@@ -1657,6 +1657,17 @@ class TestArraySetOps:
 
         assert_array_equal([], in1d([], [], invert=True))
 
+    def test_in1d_overflow(self):
+        # Test in1d
+        a = np.array([0, 1], dtype=np.int64)
+        b = np.array((9223372036854775808, 1), dtype=np.uint64)
+        assert_equal(np.isin(a, b), [False, True])
+
+        c = np.array((9223372036854775808,), dtype=np.uint64)
+        assert_equal(np.isin(a, c), [False, False])
+
+
+
     def test_union1d(self):
         # Test union1d
         a = array([1, 2, 5, 7, 5, -1], mask=[0, 0, 0, 0, 0, 1])
