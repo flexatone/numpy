@@ -306,7 +306,7 @@ def correlate(
     a: _ArrayLikeObject_co,
     v: _ArrayLikeObject_co,
     mode: _CorrelateMode = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def convolve(
@@ -355,7 +355,7 @@ def convolve(
     a: _ArrayLikeObject_co,
     v: _ArrayLikeObject_co,
     mode: _CorrelateMode = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def outer(
@@ -404,7 +404,7 @@ def outer(
     a: _ArrayLikeObject_co,
     b: _ArrayLikeObject_co,
     out: None = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 @overload
 def outer(
     a: _ArrayLikeComplex_co | _ArrayLikeTD64_co | _ArrayLikeObject_co,
@@ -459,7 +459,7 @@ def tensordot(
     a: _ArrayLikeObject_co,
     b: _ArrayLikeObject_co,
     axes: int | tuple[_ShapeLike, _ShapeLike] = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def vecdot(
@@ -492,7 +492,7 @@ def vecdot(
 @overload
 def vecdot(
     x1: _ArrayLikeObject_co, x2: _ArrayLikeObject_co, axis: int = ...
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def roll(
@@ -581,7 +581,7 @@ def cross(
     axisb: int = ...,
     axisc: int = ...,
     axis: None | int = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def indices(

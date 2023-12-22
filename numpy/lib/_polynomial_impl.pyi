@@ -75,7 +75,7 @@ def polyint(
     p: _ArrayLikeObject_co,
     m: SupportsInt | SupportsIndex = ...,
     k: None | _ArrayLikeObject_co = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def polyder(
@@ -96,7 +96,7 @@ def polyder(
 def polyder(
     p: _ArrayLikeObject_co,
     m: SupportsInt | SupportsIndex = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def polyfit(
@@ -188,7 +188,7 @@ def polyval(
 def polyval(
     p: _ArrayLikeObject_co,
     x: _ArrayLikeObject_co,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def polyadd(
@@ -229,7 +229,7 @@ def polyadd(
 def polyadd(
     a1: _ArrayLikeObject_co,
     a2: _ArrayLikeObject_co,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def polysub(
@@ -270,7 +270,7 @@ def polysub(
 def polysub(
     a1: _ArrayLikeObject_co,
     a2: _ArrayLikeObject_co,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 # NOTE: Not an alias, but they do have the same signature (that we can reuse)
 polymul = polyadd
