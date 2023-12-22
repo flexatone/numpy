@@ -27,7 +27,7 @@ def fix(
 def fix(
     x: _ArrayLikeObject_co,
     out: None = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 @overload
 def fix(
     x: _ArrayLikeFloat_co | _ArrayLikeObject_co,

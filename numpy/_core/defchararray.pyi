@@ -3,7 +3,7 @@ from typing import (
     overload,
     TypeVar,
     Any,
-    SupportsIndex, 
+    SupportsIndex,
     SupportsInt,
 )
 
@@ -16,8 +16,8 @@ from numpy import (
     int_,
     object_,
     _OrderKACF,
-    _ShapeType, 
-    _CharDType, 
+    _ShapeType,
+    _CharDType,
     _SupportsBuffer,
 )
 
@@ -362,13 +362,13 @@ class chararray(ndarray[_ShapeType, _CharDType]):
         self: _CharArray[str_],
         sep: None | U_co = ...,
         maxsplit: None | i_co = ...,
-    ) -> NDArray[object_]: ...
+    ) -> NDArray[object_[Any]]: ...
     @overload
     def rsplit(
         self: _CharArray[bytes_],
         sep: None | S_co = ...,
         maxsplit: None | i_co = ...,
-    ) -> NDArray[object_]: ...
+    ) -> NDArray[object_[Any]]: ...
 
     @overload
     def rstrip(
@@ -386,15 +386,15 @@ class chararray(ndarray[_ShapeType, _CharDType]):
         self: _CharArray[str_],
         sep: None | U_co = ...,
         maxsplit: None | i_co = ...,
-    ) -> NDArray[object_]: ...
+    ) -> NDArray[object_[Any]]: ...
     @overload
     def split(
         self: _CharArray[bytes_],
         sep: None | S_co = ...,
         maxsplit: None | i_co = ...,
-    ) -> NDArray[object_]: ...
+    ) -> NDArray[object_[Any]]: ...
 
-    def splitlines(self, keepends: None | b_co = ...) -> NDArray[object_]: ...
+    def splitlines(self, keepends: None | b_co = ...) -> NDArray[object_[Any]]: ...
 
     @overload
     def startswith(
@@ -590,13 +590,13 @@ def rsplit(
     a: U_co,
     sep: None | U_co = ...,
     maxsplit: None | i_co = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 @overload
 def rsplit(
     a: S_co,
     sep: None | S_co = ...,
     maxsplit: None | i_co = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def rstrip(a: U_co, chars: None | U_co = ...) -> NDArray[str_]: ...
@@ -608,18 +608,18 @@ def split(
     a: U_co,
     sep: None | U_co = ...,
     maxsplit: None | i_co = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 @overload
 def split(
     a: S_co,
     sep: None | S_co = ...,
     maxsplit: None | i_co = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
-def splitlines(a: U_co, keepends: None | b_co = ...) -> NDArray[object_]: ...
+def splitlines(a: U_co, keepends: None | b_co = ...) -> NDArray[object_[Any]]: ...
 @overload
-def splitlines(a: S_co, keepends: None | b_co = ...) -> NDArray[object_]: ...
+def splitlines(a: S_co, keepends: None | b_co = ...) -> NDArray[object_[Any]]: ...
 
 @overload
 def strip(a: U_co, chars: None | U_co = ...) -> NDArray[str_]: ...

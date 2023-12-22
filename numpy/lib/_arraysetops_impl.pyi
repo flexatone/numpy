@@ -132,7 +132,7 @@ def ediff1d(
     ary: _ArrayLikeObject_co,
     to_end: None | ArrayLike = ...,
     to_begin: None | ArrayLike = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def unique(

@@ -158,7 +158,7 @@ def vander(
     x: _ArrayLikeObject_co,
     N: None | int = ...,
     increasing: bool = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 
 @overload
 def histogram2d(  # type: ignore[misc]

@@ -809,7 +809,7 @@ def cumprod(
     axis: None | SupportsIndex = ...,
     dtype: None = ...,
     out: None = ...,
-) -> NDArray[object_]: ...
+) -> NDArray[object_[Any]]: ...
 @overload
 def cumprod(
     a: _ArrayLikeComplex_co | _ArrayLikeObject_co,
